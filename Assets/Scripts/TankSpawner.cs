@@ -10,6 +10,7 @@ public class TankSpawner : MonoBehaviour
     {
         Instantiate(tankPrefab, transform.position, Quaternion.identity);
         Debug.Log("Tank is Spawned");
+        Debug.Log("First Commit");
     }
 
     
