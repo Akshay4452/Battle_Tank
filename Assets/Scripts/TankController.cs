@@ -10,6 +10,8 @@ public class TankController
    public TankController(TankModel _tankModel, TankView _tankView) {
     tankModel = _tankModel;
     tankView = _tankView;
+    tankModel.SetTankController(this);
+    tankView.SetTankController(this); // this => reference of current script (TankController)
 
     GameObject.Instantiate(tankView);
    }

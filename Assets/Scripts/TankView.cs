@@ -11,6 +11,12 @@ public class TankView : MonoBehaviour
         
     }
 
+    public void SetTankController(TankController _tankController)
+    {
+        // view and controller are connected
+        tankController = _tankController;
+    }
+
     // Update is called once per frame
     void Update()
     {
