@@ -6,8 +6,8 @@ public class TankView : MonoBehaviour
 {
     private TankController tankController;
 
-    private float movement;
-    private float rotation;
+    public float movement;
+    public float rotation;
 
     public Rigidbody rb; // 
     // instantiate here as rigidbody is attached to the prefab and prefab is attached to TankView script
@@ -24,8 +24,9 @@ public class TankView : MonoBehaviour
         tankController = _tankController;
     }
 
-    private void Movement()
+    public void Movement()
     {
+        // this function will get the input and rotation data as per user input
         float movement = Input.GetAxis("Vertical");
         float rotation = Input.GetAxis("Horizontal");
     }
@@ -43,7 +44,15 @@ public class TankView : MonoBehaviour
         if(movement != 0)
         {
             tankController.Move(movement, 30); // Hardcoding movement speed as of now
+            Debug.Log("Movement detected");
         }
+        else
+        {
+            Debug.Log("Movement not detected");
+        }
+            
 
+        if(rotation != 0)
+            tankController.Rotate(rotation, 20);
     }
 }
