@@ -20,6 +20,8 @@ public class TankController
     tankModel.SetTankController(this);
     tankView.SetTankController(this); // this => reference of current script (TankController)
 
+    tankView.changeColor(tankModel.color);
+
    }
 
    public void Move(float movement, float movementSpeed)

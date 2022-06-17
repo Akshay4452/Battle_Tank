@@ -39,6 +39,14 @@ public class TankView : MonoBehaviour
         return rb;
     }
 
+    public void changeColor(Material color)
+    {   
+        for(int i=0; i<childs.Length; i++)
+        {
+            childs[i].material = color;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
