@@ -8,11 +8,10 @@ public class TankView : MonoBehaviour
 
     private float translate;
     private float rotation;
-
-    public float translateSpeed;
-
     public Rigidbody rb; // 
     // instantiate here as rigidbody is attached to the prefab and prefab is attached to TankView script
+
+    public MeshRenderer[] childs; // array of mesh renderers
 
     // Start is called before the first frame update
     void Start()
