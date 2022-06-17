@@ -6,8 +6,8 @@ public class TankView : MonoBehaviour
 {
     private TankController tankController;
 
-    public float translate;
-    public float rotation;
+    private float translate;
+    private float rotation;
 
     public float translateSpeed;
 
@@ -17,7 +17,9 @@ public class TankView : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameObject cam = GameObject.Find("Main Camera");
+        cam.transform.SetParent(transform); // tankview's transform will be the camera's transform
+        cam.transform.position = new Vector3(0f, 3f, -4f);
     }
 
     public void SetTankController(TankController _tankController)
@@ -45,11 +47,11 @@ public class TankView : MonoBehaviour
 
         if(translate != 0)
         {
-            tankController.Move(translate, 30); // Hardcoding movement speed as of now
+            tankController.Move(translate, tankController.GetTankModel().translateSpeed); 
         }
             
 
         if(rotation != 0)
-            tankController.Rotate(rotation, 50);
+            tankController.Rotate(rotation, tankController.GetTankModel().rotationSpeed);
     }
 }
