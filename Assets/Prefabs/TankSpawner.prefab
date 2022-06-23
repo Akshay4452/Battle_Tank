@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3126401194684421222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3126401194684421224}
+  - component: {fileID: 3126401194684421223}
+  m_Layer: 0
+  m_Name: TankSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3126401194684421224
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3126401194684421222}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3126401194684421223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3126401194684421222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c5830d39b2710478836fcf7833d677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tankList:
+  - translateSpeed: 30
+    rotationSpeed: 75
+    tankType: 0
+    color: {fileID: 2100000, guid: c39933e60e73205419d1f79a2af1fdac, type: 2}
+  - translateSpeed: 10
+    rotationSpeed: 50
+    tankType: 1
+    color: {fileID: 2100000, guid: ff21ff0ea9b18924bb1fdfbb0e58f5cb, type: 2}
+  - translateSpeed: 60
+    rotationSpeed: 120
+    tankType: 2
+    color: {fileID: 2100000, guid: 463052f3f7389124f9e7b34b0b931d0d, type: 2}
+  tankView: {fileID: 7934665884477645056, guid: 4831e8f162ced0c4a94251de82b86830,
+    type: 3}
